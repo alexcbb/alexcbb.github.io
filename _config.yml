@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Alexandre Chapin / Official Website"
+title                    : "Alexandre Chapin / Blog"
 title_separator          : "-"
 name                     : &name "Alexandre Chapin"
 description              : &description "Second year PhD student"
