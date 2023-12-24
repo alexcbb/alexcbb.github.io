@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-I'm a second year PhD student at Ecole Centrale de Lyon. 
+I'm a PhD student at Ecole Centrale de Lyon. 
 
 I'm supervised by professor [Liming Chen](https://scholar.google.com/citations?user=VOPW5YYAAAAJ&hl=fr&oi=ao) and professor [Emmanuel Dellandréa](https://scholar.google.com/citations?user=lK9Pa0MAAAAJ&hl=fr&oi=ao). 
 
