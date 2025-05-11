@@ -63,6 +63,8 @@ export interface SanitizedSocial {
   telegram?: string;
   phone?: string;
   email?: string;
+  scholar?: string;
+  huggingFace?: string;
 }
 
 export interface SanitizedResume {

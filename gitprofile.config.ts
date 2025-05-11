@@ -2,22 +2,39 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'alexcbb', // Your GitHub org/user name. (This is the only required config)
   },
-  /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
-   */
-  base: '/gitprofile/',
+  base: '/',
   projects: {
+    external: {
+      header: 'My Projects',
+      // To hide the `External Projects` section, keep it empty.
+      projects: [
+        {
+          title: 'LeCopain',
+          description:
+            '🤖 What if your robot could play board games ? ♟️ This is what we want to explore with this project.',
+          imageUrl:
+            'logo_lecopain_notxt.png',
+          link: 'https://github.com/alexcbb/LeCopain',
+        },
+        {
+          title: 'LeRobot data curation',
+          description:
+            'Creation of an automatic pipeline to curate datasets for the LeRobot project.',
+          imageUrl:
+            'lerobot.png',
+          link: 'https://huggingface.co/blog/lerobot-datasets',
+        },
+      ],
+    },
     github: {
       display: true, // Display GitHub projects?
-      header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      header: 'Github Repo',
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        limit: 4, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
           projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
@@ -25,41 +42,19 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['alexcbb/LeCopain', 'alexcbb/Genie-Generative-Interactive-Environments'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
-    },
-    external: {
-      header: 'My Projects',
-      // To hide the `External Projects` section, keep it empty.
-      projects: [
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-      ],
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
-    description: '',
+    title: 'Portfolio of Alexandre Chapin',
+    description: 'Third year PhD student at Ecole Centrale de Lyon.',
     imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'alexandre-chapin',
+    x: '',
+    mastodon: '',
     researchGate: '',
     facebook: '',
     instagram: '',
@@ -69,97 +64,125 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: '',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    scholar: 'd-WHKh4AAAAJ',
+    huggingFace: 'Beegbrain',
+    email: 'alexandre.chapin@ec-lyon.fr',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
-    'Git',
-    'Docker',
-    'PHPUnit',
+    'Python',
+    'Pytorch',
+    'Tensorflow',
+    'C++',
+    'C',
+    'C#',
+    'Java',
+    'HTML',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'React',
+    'Node.js',
+    'Git',
+    'JavaScript',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Ecole Centrale de Lyon',
+      position: 'PhD student',
+      from: 'October 2022',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: '',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
+      company: 'IRISA',
+      position: 'Research intern',
+      from: 'February 2022',
+      to: 'September 2022',
+      companyLink: '',
+    },
+    {
+      company: 'Inria Rennes',
+      position: 'Research intern',
+      from: 'June 2021',
       to: 'August 2021',
-      companyLink: 'https://example.com',
+      companyLink: '',
+    },
+    {
+      company: 'Capgemini',
+      position: 'Internship',
+      from: 'June 2020',
+      to: 'August 2020',
+      companyLink: '',
+    },
+    {
+      company: 'Working in the crop fields, working in a cheese factory, and working in a bank during the summer holidays.',
+      position: 'Summer jobs (Miscellaneous)',
+      from: 'July',
+      to: 'August (2015-2019)',
+      companyLink: '',
     },
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      name: 'AI Agents Fundamentals',
+      body: 'Hugging Face',
+      year: 'April 2025',
+      link: 'https://cdn-lfs-us-1.hf.co/repos/f2/34/f2344151f60f6027c436821dc61cf3f27a46435de57df8df50ad02b5acca7c07/3041e08ed83138bd63fb31c81a909d05975ac168abbc91917b9ccdbd9d8bb6bd?response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-04-21.png%3B+filename%3D%222025-04-21.png%22%3B&response-content-type=image%2Fpng&Expires=1746985187&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0Njk4NTE4N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2YyLzM0L2YyMzQ0MTUxZjYwZjYwMjdjNDM2ODIxZGM2MWNmM2YyN2E0NjQzNWRlNTdkZjhkZjUwYWQwMmI1YWNjYTdjMDcvMzA0MWUwOGVkODMxMzhiZDYzZmIzMWM4MWE5MDlkMDU5NzVhYzE2OGFiYmM5MTkxN2I5Y2NkYmQ5ZDhiYjZiZD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=pclucy%7EdcnUc1ErIoeG6msmshrwODpCHUeJLa-SZuJAL-xIWDOCp1dHtrpuIL6H0OFJHFana0KriAnXMFly4znKC0mjRP2iqnJVFLtgaLayytar10HUIDDE-ZivJck9YRQKViw0uE7lvgCC5kMFzrJbO9q3OXmmr-O79m%7ETvcJgmlvoQfDEFth41e9Ek4Ppsx-ww%7EvWH9gHvQmKuHrEAb3fKLwJHa4OtT3oaeutyYlAUuXGgrU4KKvDonaKcUnRRaTNOBAOOw%7EflBs1WfyLTPh5QaUrr0Oqkmi5DA7s1nQjGvgoHkAhaZ5aqUnHGkjE9wg%7E5LFrlT2fzHqFRiUmAwQ__&Key-Pair-Id=K24J24Z295AEI9',
     },
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Université de Rennes 1',
+      degree: 'Master in Computer Science Research',
+      from: '2021',
+      to: '2022',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Luleå tekniska universitet',
+      degree: 'ERASMUS program',
+      from: 'January 2021',
+      to: 'June 2021',
+    },
+    {
+      institution: 'INSA (Institut National des Sciences Appliquées) de Rennes',
+      degree: 'Graduate Engineering School',
+      from: '2017',
+      to: '2022',
     },
   ],
   publications: [
     {
-      title: 'Publication Title',
-      conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      title: 'Object-Centric Representations Improve Policy Generalization in Robot Manipulation',
+      conferenceName: 'Preprint',
+      journalName: '',
+      authors: 'Alexandre Chapin, Bruno Machado, Emmanuel Dellandrea, Liming Chen',
+      link: 'https://hal.science/view/index/docid/5062038',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'This work explores object-centric representations (OCR) as a structured alternative to global or dense visual features for robotic manipulation, aiming to improve generalization by disentangling task-relevant information.',
     },
     {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
+      title: 'Is an object-centric representation beneficial for robotic manipulation ?',
+      conferenceName: 'ROBOVIS 2025',
       journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      authors: 'Alexandre Chapin, Emmanuel Dellandrea, Liming Chen',
+      link: 'https://hal.science/view/index/docid/5062028',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'This paper introduces a new multi-object robotic benchmark with progressively increasing levels of difficulty and evaluates the effectiveness of object-centric representations in enhancing robotic manipulation performance.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: '', // medium | dev
+    username: '', // to hide blog section, keep it empty
     limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
@@ -175,7 +198,7 @@ const CONFIG = {
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
@@ -238,7 +261,7 @@ const CONFIG = {
       class="text-primary" href="https://github.com/arifszn/gitprofile"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+    >GitProfile</a>`,
 
   enablePWA: true,
 };
