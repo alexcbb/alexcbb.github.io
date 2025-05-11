@@ -16,20 +16,20 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'LeCopain',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            '🤖 What if your robot could play board games ? ♟️ This is what we want to explore with this project.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'logo_lecopain_notxt.png',
+          link: 'https://github.com/alexcbb/LeCopain',
         },
         {
-          title: 'Project Name',
+          title: 'LeRobot data curation',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Creation of an automatic pipeline to curate datasets for the LeRobot project.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'lerobot.png',
+          link: 'https://huggingface.co/blog/lerobot-datasets',
         },
       ],
     },
@@ -76,6 +76,7 @@ const CONFIG = {
     telegram: '',
     website: '',
     phone: '',
+    scholar: 'd-WHKh4AAAAJ',
     huggingFace: 'Beegbrain',
     email: 'alexandre.chapin@ec-lyon.fr',
   },
@@ -128,33 +129,39 @@ const CONFIG = {
       companyLink: '',
     },
     {
-      company: 'Summer jobs',
-      position: 'Working in the crop fields, working in a cheese factory, and working in a bank during the summer holidays.',
-      from: 'July 2015-2019',
-      to: 'August 2015-2019',
+      company: 'Working in the crop fields, working in a cheese factory, and working in a bank during the summer holidays.',
+      position: 'Summer jobs (Miscellaneous)',
+      from: 'July',
+      to: 'August (2015-2019)',
       companyLink: '',
     },
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      name: 'AI Agents Fundamentals',
+      body: 'Hugging Face',
+      year: 'April 2025',
+      link: 'https://cdn-lfs-us-1.hf.co/repos/f2/34/f2344151f60f6027c436821dc61cf3f27a46435de57df8df50ad02b5acca7c07/3041e08ed83138bd63fb31c81a909d05975ac168abbc91917b9ccdbd9d8bb6bd?response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-04-21.png%3B+filename%3D%222025-04-21.png%22%3B&response-content-type=image%2Fpng&Expires=1746985187&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0Njk4NTE4N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2YyLzM0L2YyMzQ0MTUxZjYwZjYwMjdjNDM2ODIxZGM2MWNmM2YyN2E0NjQzNWRlNTdkZjhkZjUwYWQwMmI1YWNjYTdjMDcvMzA0MWUwOGVkODMxMzhiZDYzZmIzMWM4MWE5MDlkMDU5NzVhYzE2OGFiYmM5MTkxN2I5Y2NkYmQ5ZDhiYjZiZD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=pclucy%7EdcnUc1ErIoeG6msmshrwODpCHUeJLa-SZuJAL-xIWDOCp1dHtrpuIL6H0OFJHFana0KriAnXMFly4znKC0mjRP2iqnJVFLtgaLayytar10HUIDDE-ZivJck9YRQKViw0uE7lvgCC5kMFzrJbO9q3OXmmr-O79m%7ETvcJgmlvoQfDEFth41e9Ek4Ppsx-ww%7EvWH9gHvQmKuHrEAb3fKLwJHa4OtT3oaeutyYlAUuXGgrU4KKvDonaKcUnRRaTNOBAOOw%7EflBs1WfyLTPh5QaUrr0Oqkmi5DA7s1nQjGvgoHkAhaZ5aqUnHGkjE9wg%7E5LFrlT2fzHqFRiUmAwQ__&Key-Pair-Id=K24J24Z295AEI9',
     },
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Université de Rennes 1',
+      degree: 'Master in Computer Science Research',
+      from: '2021',
+      to: '2022',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Luleå tekniska universitet',
+      degree: 'ERASMUS program',
+      from: 'January 2021',
+      to: 'June 2021',
+    },
+    {
+      institution: 'INSA (Institut National des Sciences Appliquées) de Rennes',
+      degree: 'Graduate Engineering School',
+      from: '2017',
+      to: '2022',
     },
   ],
   publications: [
@@ -165,7 +172,7 @@ const CONFIG = {
       authors: 'Alexandre Chapin, Bruno Machado, Emmanuel Dellandrea, Liming Chen',
       link: 'https://hal.science/view/index/docid/5062038',
       description:
-        'Visual representations are central to the learning and generalization capabilities of robotic manipulation policies. While existing methods rely on global or dense features, such representations often entangle task-relevant and irrelevant scene information, limiting robustness under distribution shifts. In this work, we investigate object-centric representations (OCR) as a structured alternative that segments visual input into a finished set of entities, introducing inductive biases that align more naturally with manipulation tasks. We benchmark a range of visual encoders-object-centric, global and dense methods-across a suite of simulated and real-world manipulation tasks ranging from simple to complex, and evaluate their generalization under diverse visual conditions including changes in lighting, texture, and the presence of distractors. Our findings reveal that OCR-based policies outperform dense and global representations in generalization settings, even without task-specific pretraining. These insights suggest that OCR is a promising direction for designing visual systems that generalize effectively in dynamic, real-world robotic environments.',
+        'This work explores object-centric representations (OCR) as a structured alternative to global or dense visual features for robotic manipulation, aiming to improve generalization by disentangling task-relevant information.',
     },
     {
       title: 'Is an object-centric representation beneficial for robotic manipulation ?',
@@ -174,7 +181,7 @@ const CONFIG = {
       authors: 'Alexandre Chapin, Emmanuel Dellandrea, Liming Chen',
       link: 'https://hal.science/view/index/docid/5062028',
       description:
-        'Object-centric representation (OCR) has recently become a subject of interest in the computer vision community for learning a structured representation of images and videos. It has been several times presented as a potential way to improve data-efficiency and generalization capabilities to learn an agent on downstream tasks. However, most existing work only evaluates such models on scene decomposition, without any notion of reasoning over the learned representation. Robotic manipulation tasks generally involve multi-object environments with potential inter-object interaction. We thus argue that they are a very interesting playground to really evaluate the potential of existing object-centric work. To do so, we create several robotic manipulation tasks in simulated environments involving multiple objects (several distractors, the robot, etc.) and a high-level of randomization (object positions, colors, shapes, background, initial positions, etc.). We then evaluate one classical object-centric method across several generalization scenarios and compare its results against several state-of-the-art hollistic representations. Our results exhibit that existing methods are prone to failure in difficult scenarios involving complex scene structures, whereas object-centric methods help overcome these challenges.',
+        'This paper introduces a new multi-object robotic benchmark with progressively increasing levels of difficulty and evaluates the effectiveness of object-centric representations in enhancing robotic manipulation performance.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)

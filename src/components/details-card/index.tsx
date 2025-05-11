@@ -202,6 +202,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 value={github.username}
                 link={`https://github.com/${github.username}`}
               />
+              {social?.huggingFace && (
+                <ListItem 
+                  icon={<img src="/huggingface.png" alt="Hugging Face" className="w-4 h-4 mr-2" />}
+                  title="Hugging Face:"
+                  value={social.huggingFace}
+                  link={`https://huggingface.co/${social.huggingFace}`}
+                /> 
+              )}
               {social?.researchGate && (
                 <ListItem
                   icon={<SiResearchgate />}
@@ -209,6 +217,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   value={social.researchGate}
                   link={`https://www.researchgate.net/profile/${social.researchGate}`}
                 />
+              )}
+              {social?.scholar && (
+                <ListItem 
+                  icon={<img src="/scholar.png" alt="Google Scholar" className="w-4 h-4 mr-2" />}
+                  title="Google Scholar:"
+                  value={social.linkedin}
+                  link={`https://scholar.google.com/citations?user=${social.scholar}`}
+                /> 
               )}
               {social?.x && (
                 <ListItem

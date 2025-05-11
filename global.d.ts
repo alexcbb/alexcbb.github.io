@@ -206,6 +206,15 @@ interface Social {
    * Email
    */
   email?: string;
+
+  /**
+   * Google Scholar
+   */
+  scholar?: string;
+  /**
+   * Hugging Face
+   */
+  huggingFace?: string;
 }
 
 interface Resume {
