@@ -11,23 +11,6 @@ const CONFIG = {
    */
   base: '/',
   projects: {
-    github: {
-      display: true, // Display GitHub projects?
-      header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
-      automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
-        exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
-        },
-      },
-      manual: {
-        // Properties for manually specifying projects
-        projects: ['alexcbb/gitprofile', 'alexcbb/LeCopain', 'alexcbb/Genie-Generative-Interactive-Environments'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
-      },
-    },
     external: {
       header: 'My Projects',
       // To hide the `External Projects` section, keep it empty.
@@ -50,14 +33,31 @@ const CONFIG = {
         },
       ],
     },
+    github: {
+      display: true, // Display GitHub projects?
+      header: 'Github Projects',
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
+      automatic: {
+        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        limit: 4, // How many projects to display.
+        exclude: {
+          forks: false, // Forked projects will not be displayed if set to true.
+          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        },
+      },
+      manual: {
+        // Properties for manually specifying projects
+        projects: ['alexcbb/gitprofile', 'alexcbb/LeCopain', 'alexcbb/Genie-Generative-Interactive-Environments'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+      },
+    },
   },
   seo: {
     title: 'Portfolio of Alexandre Chapin',
-    description: '',
+    description: 'Third year PhD student at Ecole Centrale de Lyon.',
     imageURL: '',
   },
   social: {
-    linkedin: '',
+    linkedin: 'alexandre-chapin',
     x: '',
     mastodon: '',
     researchGate: '',
@@ -76,42 +76,63 @@ const CONFIG = {
     telegram: '',
     website: '',
     phone: '',
+    huggingFace: 'Beegbrain',
     email: 'alexandre.chapin@ec-lyon.fr',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
-    'Git',
-    'Docker',
-    'PHPUnit',
+    'Python',
+    'Pytorch',
+    'Tensorflow',
+    'C++',
+    'C',
+    'C#',
+    'Java',
+    'HTML',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'React',
+    'Node.js',
+    'Git',
+    'JavaScript',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Ecole Centrale de Lyon',
+      position: 'PhD student',
+      from: 'October 2022',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: '',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
+      company: 'IRISA',
+      position: 'Research intern',
+      from: 'February 2022',
+      to: 'September 2022',
+      companyLink: '',
+    },
+    {
+      company: 'Inria Rennes',
+      position: 'Research intern',
+      from: 'June 2021',
       to: 'August 2021',
-      companyLink: 'https://example.com',
+      companyLink: '',
+    },
+    {
+      company: 'Capgemini',
+      position: 'Internship',
+      from: 'June 2020',
+      to: 'August 2020',
+      companyLink: '',
+    },
+    {
+      company: 'Summer jobs',
+      position: 'Working in the crop fields, working in a cheese factory, and working in a bank during the summer holidays.',
+      from: 'July 2015-2019',
+      to: 'August 2015-2019',
+      companyLink: '',
     },
   ],
   certifications: [
@@ -138,28 +159,28 @@ const CONFIG = {
   ],
   publications: [
     {
-      title: 'Publication Title',
-      conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      title: 'Object-Centric Representations Improve Policy Generalization in Robot Manipulation',
+      conferenceName: 'Preprint',
+      journalName: '',
+      authors: 'Alexandre Chapin, Bruno Machado, Emmanuel Dellandrea, Liming Chen',
+      link: 'https://hal.science/view/index/docid/5062038',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Visual representations are central to the learning and generalization capabilities of robotic manipulation policies. While existing methods rely on global or dense features, such representations often entangle task-relevant and irrelevant scene information, limiting robustness under distribution shifts. In this work, we investigate object-centric representations (OCR) as a structured alternative that segments visual input into a finished set of entities, introducing inductive biases that align more naturally with manipulation tasks. We benchmark a range of visual encoders-object-centric, global and dense methods-across a suite of simulated and real-world manipulation tasks ranging from simple to complex, and evaluate their generalization under diverse visual conditions including changes in lighting, texture, and the presence of distractors. Our findings reveal that OCR-based policies outperform dense and global representations in generalization settings, even without task-specific pretraining. These insights suggest that OCR is a promising direction for designing visual systems that generalize effectively in dynamic, real-world robotic environments.',
     },
     {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
+      title: 'Is an object-centric representation beneficial for robotic manipulation ?',
+      conferenceName: 'ROBOVIS 2025',
       journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      authors: 'Alexandre Chapin, Emmanuel Dellandrea, Liming Chen',
+      link: 'https://hal.science/view/index/docid/5062028',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Object-centric representation (OCR) has recently become a subject of interest in the computer vision community for learning a structured representation of images and videos. It has been several times presented as a potential way to improve data-efficiency and generalization capabilities to learn an agent on downstream tasks. However, most existing work only evaluates such models on scene decomposition, without any notion of reasoning over the learned representation. Robotic manipulation tasks generally involve multi-object environments with potential inter-object interaction. We thus argue that they are a very interesting playground to really evaluate the potential of existing object-centric work. To do so, we create several robotic manipulation tasks in simulated environments involving multiple objects (several distractors, the robot, etc.) and a high-level of randomization (object positions, colors, shapes, background, initial positions, etc.). We then evaluate one classical object-centric method across several generalization scenarios and compare its results against several state-of-the-art hollistic representations. Our results exhibit that existing methods are prone to failure in difficult scenarios involving complex scene structures, whereas object-centric methods help overcome these challenges.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: '', // medium | dev
+    username: '', // to hide blog section, keep it empty
     limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
@@ -171,7 +192,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'dark',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
