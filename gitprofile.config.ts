@@ -161,11 +161,20 @@ const CONFIG = {
   ],
   publications: [
     {
-      title: 'Object-Centric Representations Improve Policy Generalization in Robot Manipulation',
-      conferenceName: 'Preprint',
+      title: 'Robotic Manipulation via Imitation Learning: Taxonomy, Evolution, Benchmark, and Challenges',
+      conferenceName: 'Preprint (Under review)',
+      journalName: '',
+      authors: 'Zezeng Li, Alexandre Chapin, Enda Xiang, Rui Yang, Bruno Machado, Na Lei, Emmanuel Dellandrea, Di Huang, Liming Chen',
+      link: 'https://arxiv.org/abs/2508.17449',
+      description:
+        'This survey focuses on RM methodologies that leverage imitation learning, a powerful technique that allows robots to learn complex manipulation skills by mimicking human demonstrations. We identify and analyze the most influential studies in this domain, selected based on community impact and intrinsic quality. ',
+    },
+    {
+      title: 'Slot-Based Object-Centric Representations Improve Policy Generalization in Robot Manipulation',
+      conferenceName: 'Generalizable Priors for Robot Manipulation (CoRL 2025 Workshop)',
       journalName: '',
       authors: 'Alexandre Chapin, Bruno Machado, Emmanuel Dellandrea, Liming Chen',
-      link: 'https://hal.science/view/index/docid/5062038',
+      link: 'https://arxiv.org/abs/2505.11563',
       description:
         'This work explores object-centric representations (OCR) as a structured alternative to global or dense visual features for robotic manipulation, aiming to improve generalization by disentangling task-relevant information.',
     },
@@ -177,6 +186,15 @@ const CONFIG = {
       link: 'https://hal.science/view/index/docid/5062028',
       description:
         'This paper introduces a new multi-object robotic benchmark with progressively increasing levels of difficulty and evaluates the effectiveness of object-centric representations in enhancing robotic manipulation performance.',
+    },
+    {
+      title: 'FruitBin: a tunable large-scale dataset for advancing 6D pose estimation in fruit bin-picking automation',
+      conferenceName: 'ECCV 2024 Workshops',
+      journalName: '',
+      authors: 'Guillaume Duret, Mahmoud Ali, Nicolas Cazin, Danylo Mazurak, Anna Samsonenko, Alexandre Chapin, Florence Zara, Emmanuel Dellandrea, Liming Chen, Jan Peters',
+      link: 'https://hal.science/hal-04122072/',
+      description:
+        'We introduce FruitBin, a dataset featuring over 1 million images and 40 million 6D poses in challenging fruit bin scenarios. FruitBin encompasses all main challenges, such as symmetric and asymmetric fruits, textured and non-textured objects, and varied lighting conditions.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
