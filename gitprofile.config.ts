@@ -13,15 +13,15 @@ const CONFIG = {
         {
           title: 'LeCopain',
           description:
-            '🤖 What if your robot could play board games ? ♟️ This is what we want to explore with this project.',
+            '🤖 What if your robot could play board games ? ♟️ This is what we want to explore with this project. 2nd position at the first Mistral AI Robotic Hackathon in Paris',
           imageUrl:
             'logo_lecopain_notxt.png',
           link: 'https://github.com/alexcbb/LeCopain',
         },
         {
-          title: 'LeGoBot',
+          title: 'LeGobot',
           description:
-            'Creation of an automatic pipeline to let robots create pixel art with Lego blocks.',
+            'Creation of an automatic pipeline to let robots create pixel art with Lego blocks. Position 22 out 300 teams (top 30 winning teams) at the LeRobot Worldwide Hackathon)',
           imageUrl:
             'logo_legobot.png',
           link: 'https://www.linkedin.com/posts/alexandre-chapin_lerobot-robotics-ai-activity-7340631557629427718-1HPN?utm_source=share&utm_medium=member_desktop&rcm=ACoAACRdK40B9sDtrpwHsZV8ECPIqpld2HOXOos',
