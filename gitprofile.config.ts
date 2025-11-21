@@ -19,6 +19,14 @@ const CONFIG = {
           link: 'https://github.com/alexcbb/LeCopain',
         },
         {
+          title: 'LeGoBot',
+          description:
+            'Creation of an automatic pipeline to let robots create pixel art with Lego blocks.',
+          imageUrl:
+            'logo_legobot.png',
+          link: 'https://www.linkedin.com/posts/alexandre-chapin_lerobot-robotics-ai-activity-7340631557629427718-1HPN?utm_source=share&utm_medium=member_desktop&rcm=ACoAACRdK40B9sDtrpwHsZV8ECPIqpld2HOXOos',
+        },
+        {
           title: 'LeRobot data curation',
           description:
             'Creation of an automatic pipeline to curate datasets for the LeRobot project.',
@@ -48,7 +56,7 @@ const CONFIG = {
   },
   seo: {
     title: 'Portfolio of Alexandre Chapin',
-    description: 'Third year PhD student at Ecole Centrale de Lyon.',
+    description: 'Fourth year PhD student at Ecole Centrale de Lyon (LIRIS lab).',
     imageURL: '',
   },
   social: {
