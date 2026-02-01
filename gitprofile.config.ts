@@ -193,6 +193,18 @@ const CONFIG = {
       project:''
     },
     {
+      title: 'Warm-Starting Collision-Free Model Predictive Control With Object-Centric Diffusion',
+      conferenceName: 'RA-L 2025',
+      journalName: '',
+      authors: 'Arthur Haffemayer, Alexandre Chapin, Armand Jordana, Krzysztof Wojciechowski, Florent Lamiraux, Nicolas Mansard, Vladimir Petrik',
+      link: 'https://arxiv.org/abs/2601.02873',
+      imageUrl:'warm_start.gif',
+      description:
+        '',
+      code:'https://github.com/ahaffemayer/diffusion_warmstart_slot',
+      project:'https://ahaffemayer.github.io/diffusion_warmstart_slot/'
+    },
+    {
       title: 'Robotic Manipulation via Imitation Learning: Taxonomy, Evolution, Benchmark, and Challenges',
       conferenceName: 'Preprint arxiv 2025',
       journalName: '',
