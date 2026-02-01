@@ -186,7 +186,7 @@ const CONFIG = {
       journalName: '',
       authors: 'Alexandre Chapin, Emmanuel Dellandrea, Liming Chen',
       link: 'https://arxiv.org/abs/2601.20381',
-      imageUrl:'storm.png',
+      imageUrl:'storm.PNG',
       description:
         '',
       code:'',
@@ -198,7 +198,7 @@ const CONFIG = {
       journalName: '',
       authors: 'Zezeng Li, Alexandre Chapin, Enda Xiang, Rui Yang, Bruno Machado, Na Lei, Emmanuel Dellandrea, Di Huang, Liming Chen',
       link: 'https://arxiv.org/abs/2508.17449',
-      imageUrl:'review.png',
+      imageUrl:'review.PNG',
       description:
         '',
       code:'',
@@ -234,7 +234,7 @@ const CONFIG = {
       journalName: '',
       authors: 'Guillaume Duret, Mahmoud Ali, Nicolas Cazin, Danylo Mazurak, Anna Samsonenko, Alexandre Chapin, Florence Zara, Emmanuel Dellandrea, Liming Chen, Jan Peters',
       link: 'https://hal.science/hal-04122072/',
-      imageUrl:'fruitbin.png',
+      imageUrl:'fruitbin.PNG',
       description:
         '',
       code:'',
