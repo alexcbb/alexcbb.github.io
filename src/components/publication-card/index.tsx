@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import LazyImage from '../lazy-image';
 import { SanitizedPublication } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
@@ -9,7 +10,6 @@ const PublicationCard = ({
   publications: SanitizedPublication[];
   loading: boolean;
 }) => {
-  
   const renderSkeleton = () => {
     const array = [];
     for (let index = 0; index < publications.length; index++) {
@@ -17,26 +17,30 @@ const PublicationCard = ({
         <div className="card shadow-lg compact bg-base-100" key={index}>
           <div className="flex flex-col md:flex-row w-full h-full">
             <div className="w-full md:w-1/3 h-48 md:h-auto">
-               {skeleton({
-                  widthCls: 'w-full',
-                  heightCls: 'h-full',
-                  className: 'rounded-t-lg md:rounded-l-lg md:rounded-tr-none',
-                })}
+              {skeleton({
+                widthCls: 'w-full',
+                heightCls: 'h-full',
+                className: 'rounded-t-lg md:rounded-l-lg md:rounded-tr-none',
+              })}
             </div>
             <div className="p-8 w-full md:w-2/3">
               <div className="flex flex-col">
                 <div className="w-full">
-                    <h2 className="mb-2">
-                      {skeleton({ widthCls: 'w-3/4', heightCls: 'h-8', className: 'mb-2' })}
-                    </h2>
-                    <div className="mb-2">
-                      {skeleton({ widthCls: 'w-1/2', heightCls: 'h-4' })}
-                    </div>
-                    <div className="space-y-2">
-                      {skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
-                      {skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
-                      {skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
-                    </div>
+                  <h2 className="mb-2">
+                    {skeleton({
+                      widthCls: 'w-3/4',
+                      heightCls: 'h-8',
+                      className: 'mb-2',
+                    })}
+                  </h2>
+                  <div className="mb-2">
+                    {skeleton({ widthCls: 'w-1/2', heightCls: 'h-4' })}
+                  </div>
+                  <div className="space-y-2">
+                    {skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
+                    {skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
+                    {skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -50,28 +54,33 @@ const PublicationCard = ({
   const renderPublications = () => {
     return publications.map((item, index) => (
       <div
-        className="card shadow-lg compact bg-base-100 overflow-hidden" // Added overflow-hidden for image rounded corners
+        className="card shadow-lg compact bg-base-100 overflow-hidden"
         key={index}
       >
         <div className="flex flex-col md:flex-row w-full h-full">
           <div className="w-full md:w-1/3 relative h-64 md:h-auto">
-             <img 
-               src={(item as any).imageUrl || "public/robot.jpeg"} 
-               alt={item.title}
-               className="w-full h-full object-cover"
-             />
+            <LazyImage
+              src={(item as any).imageUrl || 'public/robot.jpeg'}
+              alt={item.title}
+              className="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+              placeholder={skeleton({
+                widthCls: 'w-full',
+                heightCls: 'h-full',
+                shape: '',
+                className: 'rounded-t-lg md:rounded-l-lg md:rounded-tr-none',
+              })}
+            />
           </div>
 
-          {/* --- CONTENT COLUMN --- */}
           <div className="p-8 w-full md:w-2/3">
-            <div className="flex items-start flex-col"> {/* Changed items-center to items-start for left align */}
+            <div className="flex items-start flex-col">
               <div className="w-full">
-                <div className="px-0 md:px-4"> {/* Removed padding on mobile if needed, kept on desktop */}
+                <div className="px-0 md:px-4">
                   <div className="w-full">
                     <h2 className="font-medium opacity-60 mb-2 text-lg">
-                      <a 
-                        href={item.link} 
-                        target="_blank" 
+                      <a
+                        href={item.link}
+                        target="_blank"
                         rel="noreferrer"
                         className="hover:text-primary transition-colors cursor-pointer"
                       >
@@ -80,21 +89,23 @@ const PublicationCard = ({
                     </h2>
 
                     {item.conferenceName && (
-                      <i><p className="text-base-content opacity-50 text-sm mb-1">
-                        {item.conferenceName}
-                      </p></i>
+                      <i>
+                        <p className="text-base-content opacity-50 text-sm mb-1">
+                          {item.conferenceName}
+                        </p>
+                      </i>
                     )}
                     {item.journalName && (
                       <p className="text-base-content opacity-50 text-sm mb-1">
                         {item.journalName}
                       </p>
                     )}
-                    
+
                     {item.authors && (
                       <p className="text-base-content opacity-50 text-sm mb-2">
-                        {item.authors.split(",").map((author, i, arr) => {
+                        {item.authors.split(',').map((author, i, arr) => {
                           const trimmedAuthor = author.trim();
-                          const isTarget = trimmedAuthor === "Alexandre Chapin";
+                          const isTarget = trimmedAuthor === 'Alexandre Chapin';
                           const isFirst = i === 0;
 
                           return (
@@ -102,15 +113,15 @@ const PublicationCard = ({
                               {isTarget ? (
                                 <span className="font-bold text-base-content opacity-100">
                                   {trimmedAuthor}
-                                  {isFirst && "*"}
+                                  {isFirst && '*'}
                                 </span>
                               ) : (
                                 <span>
                                   {trimmedAuthor}
-                                  {isFirst && "*"}
+                                  {isFirst && '*'}
                                 </span>
                               )}
-                              {i < arr.length - 1 ? ", " : ""}
+                              {i < arr.length - 1 ? ', ' : ''}
                             </span>
                           );
                         })}
@@ -125,32 +136,36 @@ const PublicationCard = ({
 
                     <div className="mt-4 flex flex-wrap gap-2 text-sm font-medium">
                       {item.link && (
-                        <a href={item.link} target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
                           [Paper]
                         </a>
                       )}
                       {(item as any).code && (
-                        <a 
-                          href={(item as any).code} 
-                          target="_blank" 
-                          rel="noreferrer" 
+                        <a
+                          href={(item as any).code}
+                          target="_blank"
+                          rel="noreferrer"
                           className="text-blue-500 hover:underline hover:text-blue-600 transition-colors"
                         >
                           [Code]
                         </a>
                       )}
                       {(item as any).project && (
-                        <a 
-                          href={(item as any).project} 
-                          target="_blank" 
-                          rel="noreferrer" 
+                        <a
+                          href={(item as any).project}
+                          target="_blank"
+                          rel="noreferrer"
                           className="text-blue-500 hover:underline hover:text-blue-600 transition-colors"
                         >
                           [Project Page]
                         </a>
                       )}
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -164,8 +179,7 @@ const PublicationCard = ({
   return (
     <Fragment>
       <div className="col-span-1 lg:col-span-2">
-        {/* Changed grid-cols-2 to grid-cols-1 to force full width */}
-        <div className="grid grid-cols-1 gap-6"> 
+        <div className="grid grid-cols-1 gap-6">
           <div className="col-span-1">
             <div className="card compact bg-base-100 shadow bg-opacity-40">
               <div className="card-body">
@@ -180,8 +194,7 @@ const PublicationCard = ({
                     )}
                   </h5>
                 </div>
-                <div className="col-span-1"> 
-                  {/* Ensure inner grid is also 1 column */}
+                <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
                     {loading ? renderSkeleton() : renderPublications()}
                   </div>
