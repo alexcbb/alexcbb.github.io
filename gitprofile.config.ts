@@ -182,7 +182,7 @@ const CONFIG = {
     },
     {
       title: 'STORM: Slot-based Task-aware Object-centric Representation for robotic Manipulation',
-      conferenceName: 'Preprint arxiv 2026',
+      conferenceName: 'CVPR 2026 Workshop (Activis - Bridging Vision, Language, and Action: What\'s Missing in Actionable Visual Perception for Robotics)',
       journalName: '',
       authors: 'Alexandre Chapin, Emmanuel Dellandrea, Liming Chen',
       link: 'https://arxiv.org/abs/2601.20381',
