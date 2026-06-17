@@ -170,7 +170,7 @@ const CONFIG = {
   publications: [
     {
       title: 'Spotlighting Task-Relevant Features: Object-Centric Representations for Better Generalization in Robotic Manipulation',
-      conferenceName: 'Preprint arxiv 2026',
+      conferenceName: 'IROS 2026',
       journalName: '',
       authors: 'Alexandre Chapin, Bruno Machado, Emmanuel Dellandrea, Liming Chen',
       link: 'https://arxiv.org/abs/2601.21416',
