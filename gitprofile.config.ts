@@ -193,6 +193,18 @@ const CONFIG = {
       project:''
     },
     {
+      title: 'More Structure, Not More Capacity: Object-Centric Representations for Visuomotor Imitation Learning',
+      conferenceName: 'RSS 2026 Workshops (From perception to action: representation-centric robot autonomy)',
+      journalName: '',
+      authors: 'Yi Li, Alexandre Chapin, Liming Chen, Jan Peters, Alap Kshirsagarn',
+      link: '',
+      imageUrl:'structure.PNG',
+      description:
+        '',
+      code:'',
+      project:''
+    },
+    {
       title: 'Warm-Starting Collision-Free Model Predictive Control With Object-Centric Diffusion',
       conferenceName: 'RA-L 2025',
       journalName: '',
