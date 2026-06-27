@@ -198,7 +198,7 @@ const CONFIG = {
       journalName: '',
       authors: 'Yi Li, Alexandre Chapin, Liming Chen, Jan Peters, Alap Kshirsagarn',
       link: '',
-      imageUrl:'structure.PNG',
+      imageUrl:'structure.png',
       description:
         '',
       code:'',
